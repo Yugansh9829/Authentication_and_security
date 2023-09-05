@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <!-- <link rel="stylesheet" href="style.css"> will direct us to parent directory -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    height: 500px;
+    background-color: rgb(168, 214, 240);
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10vw;
+    margin-left: 30vw;
+    border-radius: 20px;
+}
+.form_here{
+    height: 60%;
+    width: 60%;
+}
+.form_1{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+}
+.form_1 label{
+    font-size: 1.2rem;
+}
+.form_1 input{
+    height: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+    background: transparent;
+    border: 2px solid rgb(168, 214, 240);
+    border-bottom: 2px solid black;
+    font-size: 1.2rem;
+}
+.form_1 button{
+    height: 50px;
+    width: 30%;
+    margin-left: 8.5vw;
+}
+@media screen and (max-width:700px){
+    .container{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    .form_1 button{
+        margin-left: 15vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h1>login Page</h1></div>
+        <div class="form_here">
+            <form action="/login" method="post" class="form_1">
+                <label>Enter Your E-mail</label>
+                <input type="text" name="email" placeholder="Enter your E-mail">
+                <label>Enter Password</label>
+                <input type="password" name="Password" placeholder="Enter your Password">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    if(locals.red){
+        alert("User already exists");
+    }
+</script>
+</html>
